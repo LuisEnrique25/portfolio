@@ -2,36 +2,41 @@
     {
         "name":"Weather App", 
         "img" : "/images/projects/weather.webp", 
-        "description": "The application features an intuitive interface where users can input the name of a specific city to retrieve the corresponding weather information. By utilizing the WEATHER API, the application can access real-time data and provide details such as the current temperature, feels like temperature, weather description, humidity, wind speed, and more.", 
+        "description": "The app has a user-friendly interface for inputting a city name and retrieving corresponding weather data. It utilizes the Weather API to access real-time information.", 
         "link": "https://weather-app-wizz.netlify.app/",
-        "github": "https://github.com/LuisEnrique25/WeatherApp"
+        "github": "https://github.com/LuisEnrique25/WeatherApp",
+        "tags": ["react"]
     },
     {
         "name":"Usuarios", 
         "img" : "/images/projects/usuarios.webp", 
-        "description": "The application not only provides an efficient and convenient way to display, register, delete, and edit users but also seamlessly integrates with an existing API. This allows the application to connect and fetch data from an external source, adding flexibility and scalability to user management.", 
+        "description": "The app enables efficient user registration, deletion, and editing while seamlessly integrating with an API, enhancing user management with flexibility and scalability.", 
         "link": "https://users-form-wizz.netlify.app/",
-        "github": "https://github.com/LuisEnrique25/form"
+        "github": "https://github.com/LuisEnrique25/form",
+        "tags": ["react"]
     },
     {
         "name":"Wiki Spartans", 
         "img" : "/images/projects/spartans.webp", 
-        "description": "Upon opening the application, users are greeted with a visually appealing interface where they can press a button to generate a random Spartan. Each time the button is pressed, a different Spartan is displayed along with their image and a detailed description.", 
+        "description": "The app showcases a button that, when clicked or refreshed, reveals a randomly generated Spartan, adding an element of surprise and excitement to the user experience.", 
         "link": "https://spartans-characters-wiiz.netlify.app/",
-        "github": "https://github.com/LuisEnrique25/spartans"
+        "github": "https://github.com/LuisEnrique25/spartans",
+        "tags": ["html5"]
     },
     {
         "name":"Rick&Morty App", 
         "img" : "/images/projects/rick.webp", 
-        "description": "The app is a comprehensive tool that provides information about different locations in the Rick&Morty series. Users can explore various locales along with details such as the type of locality, the dimension it exists in, and the population. Additionally, the app offers an interactive feature that displays all the characters associated with each location.", 
+        "description": "Users can explore details about various locations, either by randomly discovering them or by searching for specific ones, adding to the immersive experience of the show.", 
         "link": "https://rick-and-morty-wizz.netlify.app/",
-        "github": "https://github.com/LuisEnrique25/rick-and-morty"
+        "github": "https://github.com/LuisEnrique25/rick-and-morty",
+        "tags": ["react"]
     },
     {
         "name":"Pokedex App", 
         "img" : "/images/projects/pokeApp.webp", 
-        "description": "The Pokedex App is a comprehensive tool to discover and explore the vast variety of Pokémon. With its login authentication, filtering, and search options, it provides users with an interactive and personalized experience to delve into the captivating world of Pokémon.", 
+        "description": "With its login authentication, filtering, and search options, the app provides users with an interactive and personalized experience to immerse themselves in the captivating world of Pokémon.", 
         "link": "https://pokedex-app-wizz.netlify.app/",
-        "github": "https://github.com/LuisEnrique25/pokeApp"
+        "github": "https://github.com/LuisEnrique25/pokeApp",
+        "tags": ["react"]
     }
 ]
