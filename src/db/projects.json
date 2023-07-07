@@ -38,5 +38,13 @@
         "link": "https://pokedex-app-wizz.netlify.app/",
         "github": "https://github.com/LuisEnrique25/pokeApp",
         "tags": ["react"]
+    },
+    {
+        "name":"Shopping Cart", 
+        "img" : "/images/projects/shopCart.webp", 
+        "description": "Explore the online shopping page that I have created! By utilizing a JSON file and localStorage, I have simulated an API to provide data and complete functionality. ", 
+        "link": "https://carrito-compras-luisr25.netlify.app/",
+        "github": "https://github.com/LuisEnrique25/CarritoAcademlo",
+        "tags": ["react"]
     }
 ]
