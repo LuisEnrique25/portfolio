@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
+import Nav from '../components/Nav'
 
 const Contact = () => {
   const currentPage = useSelector(store => store.currentPage)
@@ -70,7 +71,7 @@ const Contact = () => {
 
       </section>
     </section>
-    <NavLink to="/">Start</NavLink>
+    <Nav/>
     </section>
   )
 }

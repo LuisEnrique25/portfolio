@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
+import Nav from '../components/Nav'
 
 const About = () => {
   const currentPage = useSelector(store => store.currentPage)
@@ -79,7 +80,7 @@ const About = () => {
 
       </section>
     </section>
-      <NavLink to="/">Start</NavLink>
+      <Nav/>
     </section>
   )
 }
