@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <section className='bg-zinc-900 text-white min-h-screen p-4 scroll-smooth'>
     <section className='max-w-6xl m-auto'>
-      <h2 className='p-2 text-3xl text-[#00bdff] tracking-widest select-none '>{currentPage}</h2>
+      <h2 className='p-2 text-3xl text-[#00bdff] tracking-widest select-none '>Contact</h2>
       <p className='p-3 pt-1 text-start text-lg sm:text-xl'>If you’d like to chat about a project or just have question, please get in touch.</p>
       <section className='w-full '>
 
@@ -60,7 +60,7 @@ const Contact = () => {
         </form>
 
         <section className='w-full'>
-          <h2 className='text-center text-lg sm:text-xl pb-1'>Also</h2>
+          <h2 className='text-center text-lg sm:text-xl pb-1'>Also...</h2>
           <ul className='flex gap-4 justify-center'>
             <Link to="https://www.linkedin.com/in/luis-reyes-1732a3227/" target='_blank' className='sm:text-lg hover:underline hover:text-blue-500 font-semibold'>Linkedin</Link>
             <Link to="https://wa.me/522215870242" target='_blank' className='sm:text-lg hover:underline hover:text-emerald-500 font-semibold'>WhatsApp</Link>
