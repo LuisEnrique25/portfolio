@@ -1,0 +1,72 @@
+.itemsList i{
+    color: rgb(39, 39, 39);
+    transition: 0.8s;
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+    
+}
+
+.itemsList i:hover{
+    transition: 0.1s;
+    color: rgb(0, 140, 255);
+    text-shadow: 0 0 60px #00bdff;
+
+}
+
+.itemsList{
+   
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.itemsList:nth-child(2){
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2 {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+
+.rowContainer:nth-child(even) .itemsList{
+   
+    animation: animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.rowContainer:nth-child(even) .itemsList:nth-child(2){
+    animation: animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate4 {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
