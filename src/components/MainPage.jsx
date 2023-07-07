@@ -29,7 +29,8 @@ const MainPage = () => {
     }
 
   return (
-    <section className='relative w-full max-h-screen bg-zinc-950 flex overflow-hidden flex-col'>
+    <section className='bg-zinc-950 min-h-screen '>
+    <section className='relative w-full max-h-screen bg-zinc-950 flex overflow-hidden flex-col max-w-[1450px] m-auto'>
        {/** */}
         {
             iconsDB.map((icon) => <div key={icon} className='relative -top-36 w-full flex py-3 whitespace-nowrap  text-4xl sm:text-6xl -rotate-12 rowContainer'>
@@ -58,6 +59,7 @@ const MainPage = () => {
             </nav>
 
         </section>
+    </section>
     </section>
   )
 }
