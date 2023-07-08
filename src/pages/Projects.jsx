@@ -8,7 +8,7 @@ import Nav from '../components/Nav'
 const Projects = () => {
   const [projects, setProjects] = useState([])
   const currentPage = useSelector(store => store.currentPage)
-  console.log(projects);
+  
   
   useEffect(() =>{
     setProjects(DB)
