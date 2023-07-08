@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import Nav from '../components/Nav'
 
 const Contact = () => {
+  const form = useRef()
   const currentPage = useSelector(store => store.currentPage)
   const {register, reset, handleSubmit, formState: {errors}} = useForm()
 
   const onSubmit = () =>{
-    console.log("click");
+    emailjs.sendForm('service_q1pt4yg', 'template_kgusu9j', form.current, 'e5tVNXUJJ1XXkgyoV')
+      .then((result) => {
+        console.log(result.text)
+      },(error) => {
+        console.log(error.text);
+      })
   }
 
   return (
@@ -20,11 +27,11 @@ const Contact = () => {
       <section className='w-full '>
 
 
-        <form name="contact-form" netlify onSubmit={handleSubmit(onSubmit)} className='p-2 max-w-xl m-auto'>
+        <form name="contact-form" ref={form} onSubmit={handleSubmit(onSubmit)} className='p-2 max-w-xl m-auto'>
           {/**NAME */ }
           <div className='grid gap-1'>
             <label htmlFor="name" className='p-1'>Your Name</label>
-            <input id='name' placeholder='Type your name...' type="text" className='p-2 rounded-md overflow-hidden outline-none bg-slate-500' {...register("name",
+            <input id='name' name='user_name' placeholder='Type your name...' type="text" className='p-2 rounded-md overflow-hidden outline-none bg-slate-500' {...register("name",
             {required: "This field is required",
             maxLength:{
               value: 30,
@@ -37,7 +44,7 @@ const Contact = () => {
           {/**EMAIL */ }
           <div className='grid gap-1'>
             <label htmlFor="email" className='p-1'>Email</label>
-            <input id='email' type="email" placeholder='hello@example.co' className='p-2 rounded-md overflow-hidden outline-none bg-slate-500' {...register("email",
+            <input id='email' name='user_email' type="email" placeholder='hello@example.co' className='p-2 rounded-md overflow-hidden outline-none bg-slate-500' {...register("email",
             {required: "This field is required",
             pattern:{
               value : /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -49,7 +56,7 @@ const Contact = () => {
           {/**MESSAGE */ }
           <div className='grid gap-1'>
             <label htmlFor="message" className='p-1'>General Message</label>
-            <textarea name="message" id="message"  rows="6" placeholder='Say Hi!...' className='p-2 rounded-md overflow-hidden outline-none bg-slate-500' {...register("message", {
+            <textarea name="user_message" id="message"  rows="6" placeholder='Say Hi!...' className='p-2 rounded-md overflow-hidden outline-none bg-slate-500' {...register("message", {
               required: "This field is required"
             })}></textarea>
             {errors.message && <p className='text-sm text-red-400 text-center'>{errors.message.message}</p>}
