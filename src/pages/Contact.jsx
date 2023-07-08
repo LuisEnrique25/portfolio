@@ -4,13 +4,14 @@ import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
 import Nav from '../components/Nav'
+import { send } from 'vite'
 
 const Contact = () => {
   const form = useRef()
   const currentPage = useSelector(store => store.currentPage)
   const {register, reset, handleSubmit, formState: {errors}} = useForm()
 
-  const onSubmit = () =>{
+  const sendEmail = () =>{
     emailjs.sendForm('service_q1pt4yg', 'template_kgusu9j', form.current, 'e5tVNXUJJ1XXkgyoV')
       .then((result) => {
         console.log(result.text)
@@ -27,7 +28,7 @@ const Contact = () => {
       <section className='w-full '>
 
 
-        <form name="contact-form" ref={form} onSubmit={handleSubmit(onSubmit)} className='p-2 max-w-xl m-auto'>
+        <form ref={form} onSubmit={handleSubmit(sendEmail)} className='p-2 max-w-xl m-auto'>
           {/**NAME */ }
           <div className='grid gap-1'>
             <label htmlFor="name" className='p-1'>Your Name</label>
@@ -62,7 +63,7 @@ const Contact = () => {
             {errors.message && <p className='text-sm text-red-400 text-center'>{errors.message.message}</p>}
           </div>
           <div className='w-full p-3 flex justify-center'>
-            <button className='p-2 sm:px-4 shadow-sm rounded-md backdrop-blur-sm hover:bg-sky-600/10 hover:backdrop-blur-md shadow-sky-400 hover:shadow-sky-400 hover:shadow-md '>Send</button>
+            <button type='submit' value="Send" className='p-2 sm:px-4 shadow-sm rounded-md backdrop-blur-sm hover:bg-sky-600/10 hover:backdrop-blur-md shadow-sky-400 hover:shadow-sky-400 hover:shadow-md '>Send</button>
           </div>
           
         </form>
