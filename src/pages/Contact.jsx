@@ -28,7 +28,7 @@ const Contact = () => {
       <section className='w-full '>
 
 
-        <form ref={form} onSubmit={handleSubmit(sendEmail)} className='p-2 max-w-xl m-auto'>
+        <form ref={form} onSubmit={handleSubmit(sendEmail)} className='p-3 max-w-xl m-auto'>
           {/**NAME */ }
           <div className='grid gap-1'>
             <label htmlFor="name" className='p-1'>Your Name</label>
