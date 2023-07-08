@@ -20,7 +20,7 @@ const Contact = () => {
       <section className='w-full '>
 
 
-        <form action="" onSubmit={handleSubmit(onSubmit)} className='p-2 max-w-xl m-auto'>
+        <form name="contact-form" netlify onSubmit={handleSubmit(onSubmit)} className='p-2 max-w-xl m-auto'>
           {/**NAME */ }
           <div className='grid gap-1'>
             <label htmlFor="name" className='p-1'>Your Name</label>
